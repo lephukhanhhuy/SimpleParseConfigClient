@@ -7,6 +7,9 @@
 //
 
 #import "SimpleParseConfigClient.h"
+
+#define kUserKeyCachingConfig @"kUserKeyCachingConfig"
+
 @interface SimpleParseConfigClient()
 @property NSString* appId;
 @property NSString* apiKey;
@@ -31,6 +34,7 @@ static SimpleParseConfigClient* _sharedInstance = nil;
         // This is Class App on Parse admin
         _sharedInstance.appId = appId;
         _sharedInstance.apiKey = apiKey;
+        _sharedInstance.appConfig = [[NSUserDefaults standardUserDefaults] objectForKey:kUserKeyCachingConfig];
     }
     return _sharedInstance;
 }
@@ -51,6 +55,8 @@ static SimpleParseConfigClient* _sharedInstance = nil;
                 NSLog(@"receivedData (NSDictionary): %@", dict);
                 if (onCompleted) {
                     self.appConfig = dict[@"params"];
+                    [[NSUserDefaults standardUserDefaults] setObject:self.appConfig forKey:kUserKeyCachingConfig];
+                    [[NSUserDefaults standardUserDefaults] synchronize];
                     onCompleted(self.appConfig);
                     return;
                 }

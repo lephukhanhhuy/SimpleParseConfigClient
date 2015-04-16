@@ -17,10 +17,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.textViewData.text = @"";
+    [SimpleParseConfigClient setAppId:@"dy5mUHeKVRfJzeP1joZg6GSWAKtKWwlapz1wqFFC"];
+    [SimpleParseConfigClient setAPIKey:@"qVjsuLpmbEseNI3MYeP9PFJKEq3o6o99EKyXNO7K"];
     
-    [SimpleParseConfigClient setAppId:@"Put your app id here"];
-    [SimpleParseConfigClient setAPIKey:@"Put your rest api key here"];
+    self.textViewData.text = self.textViewData.text = [NSString stringWithFormat:@"%@", [SimpleParseConfigClient sharedInstance].appConfig];
+    
+//    [SimpleParseConfigClient setAppId:@"Put your app id here"];
+//    [SimpleParseConfigClient setAPIKey:@"Put your rest api key here"];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
