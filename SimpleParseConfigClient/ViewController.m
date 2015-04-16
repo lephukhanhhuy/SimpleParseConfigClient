@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
-
+#import "SimpleParseConfigClient.h"
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *textViewData;
 
 @end
 
@@ -16,12 +17,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.textViewData.text = @"";
+    
+    [SimpleParseConfigClient setAppId:@"Put your app id here"];
+    [SimpleParseConfigClient setAPIKey:@"Put your rest api key here"];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)btnRequestConfigSelected:(id)sender {
+    self.textViewData.text = @"Loading...";
+    [[SimpleParseConfigClient sharedInstance] requestConfigOnCompleted:^(NSDictionary *app) {
+        self.textViewData.text = [NSString stringWithFormat:@"%@", app];
+    }];
 }
 
 @end

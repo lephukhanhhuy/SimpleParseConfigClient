@@ -14,6 +14,7 @@
 		1C9526261ADF9697004CCFB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C9526251ADF9697004CCFB9 /* Images.xcassets */; };
 		1C9526291ADF9697004CCFB9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C9526271ADF9697004CCFB9 /* LaunchScreen.xib */; };
 		1C9526351ADF9697004CCFB9 /* SimpleParseConfigClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9526341ADF9697004CCFB9 /* SimpleParseConfigClientTests.m */; };
+		1C9526411ADF96CC004CCFB9 /* SimpleParseConfigClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9526401ADF96CC004CCFB9 /* SimpleParseConfigClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		1C95262E1ADF9697004CCFB9 /* SimpleParseConfigClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleParseConfigClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C9526331ADF9697004CCFB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C9526341ADF9697004CCFB9 /* SimpleParseConfigClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleParseConfigClientTests.m; sourceTree = "<group>"; };
+		1C95263F1ADF96CC004CCFB9 /* SimpleParseConfigClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleParseConfigClient.h; sourceTree = "<group>"; };
+		1C9526401ADF96CC004CCFB9 /* SimpleParseConfigClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleParseConfigClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		1C9526171ADF9697004CCFB9 /* SimpleParseConfigClient */ = {
 			isa = PBXGroup;
 			children = (
+				1C95263E1ADF96BB004CCFB9 /* SimpleParseConfigClient */,
 				1C95261C1ADF9697004CCFB9 /* AppDelegate.h */,
 				1C95261D1ADF9697004CCFB9 /* AppDelegate.m */,
 				1C95261F1ADF9697004CCFB9 /* ViewController.h */,
@@ -117,6 +121,15 @@
 				1C9526331ADF9697004CCFB9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1C95263E1ADF96BB004CCFB9 /* SimpleParseConfigClient */ = {
+			isa = PBXGroup;
+			children = (
+				1C95263F1ADF96CC004CCFB9 /* SimpleParseConfigClient.h */,
+				1C9526401ADF96CC004CCFB9 /* SimpleParseConfigClient.m */,
+			);
+			path = SimpleParseConfigClient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +234,7 @@
 			files = (
 				1C9526211ADF9697004CCFB9 /* ViewController.m in Sources */,
 				1C95261E1ADF9697004CCFB9 /* AppDelegate.m in Sources */,
+				1C9526411ADF96CC004CCFB9 /* SimpleParseConfigClient.m in Sources */,
 				1C95261B1ADF9697004CCFB9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,7 +313,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -337,7 +351,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
